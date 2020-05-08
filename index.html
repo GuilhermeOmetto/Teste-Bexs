@@ -3,111 +3,240 @@
 
 <head>
     <title>Demo Shop</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link type="image/x-icon" rel="icon" href="" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+        crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <!-- Nav tabs -->
-        <nav class="nav bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
+        <nav class="navbar navbar-light navbar-expand-lg justify-content-between">
+            <a class="col-7 offset-1 navbar-brand" href="javascript:void(0)">
+                <img src="imgs/logo.svg" class="d-inline-block align-middle img-fluid" alt="Demo Shop">
             </a>
-            
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Lorem</a>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="javascript:void(0)">Lorem</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Lorem</a>
+                    <a class="nav-link" href="javascript:void(0)">Lorem</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Lorem</a>
+                    <a class="nav-link" href="javascript:void(0)">Lorem</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown Lorem
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">Lorem</a>
-                      <a class="dropdown-item" href="#">Lorem</a>
-                      <a class="dropdown-item" href="#">Lorem</a>
-                    </div>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">Lorem</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">Lorem</a>
                   </li>
                 </ul>
-              </div>
-            </nav>
-
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
-            <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
-            <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
-            <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
-            <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    
-    <div class="content">
-        <div class="container-fluid">
-            <section class="">
-                <div class="row"></div>
-            </section>
+    <div class="general">
+        <div class="container-fluid no-padding">
+            <section class="row content-info-card">
 
-            <section class="">
-                <div class="row">
-                    <div class="col-3">
-                        Carrinho
+                <div class="card-info col-md-12 col-lg-4">
+                    <div class="row">
+                        <div class="col offset-2 d-none d-lg-flex">
+                            <a href="javascript:void(0)" onclick="backPage()" class="font-size-0-8">
+                                <i class="fas fa-chevron-left font-size-1 margin-rigth-0-5 align-middle"></i> Alterar forma de pagamento
+                            </a>
+                        </div>
+
+                        <div class="col-12 d-flex d-lg-none">
+                            <div class="steps-mobile">
+                                <a href="javascript:void(0)" onclick="backPage()">
+                                    <i class="fas fa-chevron-left"></i> 
+                                </a>
+
+                                <span>Etapa 2</span> de 3
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-3">
-                        Pagamento
+
+                    <div class="row margin-top-3-5">
+                        <div class="col-12 col-lg-10 offset-lg-2 text-center">
+                            <img src="imgs/icon-card.svg" class="align-middle img-fluid" alt="icon cartão de crédito">
+                            <h6 class="d-inline-block align-middle font-weight-bold font-size-1-25 text-left">Adicione um novo<br/>cartão de crédito</h6>
+                        </div>
                     </div>
-                    <div class="col-3">
-                        Confirmação
+
+                    <div class="row margin-top-2">
+                        <div class="col offset-lg-2">
+                            <div class="container-card">
+                                <div class="dinamic-card" id="dinamicCard">
+                                    <div class="front-card" id="frontCard">
+                                        <div class="row">
+                                            <div class="col-12 text-left">
+                                                <img src="imgs/operator-card.png" alt="visa" class="img-fluid img-operator-fake" id="imgOperatorFake">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <input type="text" autocomplete="off" name="numberCardFake" maxlength="19" id="numberCardFake" class="form-control number-card-fake" disabled>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <input type="text" autocomplete="off" name="nameCardFake" id="nameCardFake" class="form-control name-card-fake" disabled>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <input type="text" autocomplete="off" name="expirationDateFake" maxlength="5" id="expirationDateFake" class="form-control expiration-fake" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="back-card" id="backCard">
+                                        <div class="row">
+                                            <div class="col-3 offset-5">
+                                                <input type="text" autocomplete="off" name="CCVFake" maxlength="3" id="CCVFake" class="form-control cvv-fake" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="form-info col-md-12 col-lg-8">
+                    <div class="row d-none d-lg-flex">
+                        <div class="col-3 offset-md-1">
+                            <div class="stepes">
+                                <span class="stage stage-check"> <i class="fas fa-check"></i> </span>
+                                Carrinho
+                            </div>
+                        </div>
+
+                        <div class="col-1">
+                            <div class="stepes">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <div class="stepes">
+                                <span class="stage">2</span>
+                                Pagamento
+                            </div>
+                        </div>
+
+                        <div class="col-1">
+                            <div class="stepes">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <div class="stepes">
+                                <span class="stage">3</span>
+                                Confirmação
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <form action="" method="post" id="form" class="col-lg-10 offset-lg-2">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="numbercard">Número do cartão</label>
+                                    <input type="text" autocomplete="off" name="numberCard" maxlength="19" id="numberCard" class="form-control" placeholder="Número do cartão" aria-describedby="numberCard" required>
+                                    <small id="numberInvalid" class="text-guide">Número de cartão inválido</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="namecard">Nome (igual do cartão)</label>
+                                    <input type="text" autocomplete="off" name="nameCard" id="nameCard" class="form-control" placeholder="Nome (igual ao cartão)" aria-describedby="name" required>
+                                    <small id="nameInvalid" class="text-guide">Insira seu nome completo</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <label for="expirationdate">Validade</label>
+                                    <input type="text" autocomplete="off" name="expirationDate" maxlength="5" id="expirationDate" class="form-control" placeholder="Validade" aria-describedby="expirationDate" required>
+                                    <small id="expirationDateInvalid" class="text-guide">Data inválida</small>
+                                </div>
+
+                                <div class="col-12 col-lg-6">
+                                    <label for="ccv">CCV</label>
+                                    <input type="text" autocomplete="off" name="CCV" maxlength="3" id="CCV" class="form-control" placeholder="CCV" aria-describedby="ccv" required>
+                                    <small id="ccvInvalid" class="text-guide">Código inválido</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label></label>
+                                    <select class="form-control" name="installments" id="installments" required>
+                                        <option value="0" selected disabled>Número de parcelas</option>
+                                    
+                                        <option value="1">1x R$3.000,00 sem juros</option>
+                                        <option value="2">2x R$1.500,00 sem juros</option>
+                                        <option value="3">3x R$1.000,00 sem juros</option>
+                                    </select>
+                                    
+                                    <small id="installmentsInvalid" class="text-guide">Insira o número de parcelas</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row margin-top-4">
+                            <div class="col offset-lg-5">
+                                <button type="submit" id="btnNext" class="btn btn-primary" onclick="validateFildNull()">Continuar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
             </section>
         </div>
     </div>
 
-    <footer class="page-footer font-small pt-4">
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="#"> DemoShop</a>
-        </div>
-    </footer>
 
-
-
-    <script>
-        $('#navId a').click(e => {
-            e.preventDefault();
-            $(this).tab('show');
-        });
-    </script>
-
-
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-</body>
+    <script src="util.js"></script>
 
+</body>
 </html>
